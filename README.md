@@ -7,6 +7,7 @@ Second try at a first Repository
 #### Email: oneal.cameron12@gmail.com
 #### Website: https://repl.it/repls
 #### Image:
-<img src="downloads/IMG_7811.jpeg" width=200 height=200 >
+<img src="" width=200 height=200 >
 
 #### Avatar: 
+<p> Well I can't seem to find an image </p>
