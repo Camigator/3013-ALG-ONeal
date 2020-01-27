@@ -7,7 +7,7 @@ Second try at a first Repository
 #### Email: oneal.cameron12@gmail.com
 #### Website: https://repl.it/repls
 #### Image:
-<img src="" width=200 height=200 >
+![](IMG_1673.JPG (witdh="200" height="200"))
 
 #### Avatar: 
-<p> Well I can't seem to find an image </p>
+![](Sasuke.jpg)
