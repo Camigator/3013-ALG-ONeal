@@ -18,6 +18,12 @@
       <td> Practice Commmenting Code </td>  
   </tr>
   
+  <tr>
+  <td> 03 </td>
+  <td> <a href="https://github.com/Camigator/3013-ALG-ONeal/tree/master/Assignments/03-Banner" > Banner </a> </td>
+  <td> Creating our own banner Text </td>
+  </tr>
+  
         
 </table>
 </body>
