@@ -7,7 +7,7 @@ Second try at a first Repository
 #### Email: oneal.cameron12@gmail.com
 #### Website: https://repl.it/repls
 #### Image:
-![](IMG_1673.JPG (witdh="200" height="200"))
+<img src="https://raw.githubusercontent.com/Camigator/3013-ALG-ONeal/master/Pictures/CAM.jpg" width=800 height=400>
 
 #### Avatar: 
-![](Sasuke.jpg)
+<img src="https://github.com/Camigator/3013-ALG-ONeal/blob/master/Pictures/Sasuke.jpg" width=300 height=500>
