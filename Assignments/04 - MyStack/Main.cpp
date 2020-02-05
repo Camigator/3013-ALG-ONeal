@@ -33,7 +33,7 @@
 using namespace std;
 
 // #define ListSize 10                   // size of our original stack
-#define IncSize 2                     // Mupltiplier to increase size of stack
+#define IncSize 1.75                     // Mupltiplier to increase size of stack
 #define decSize .5                    // Mupltiplier to decrease size of stack
 
 class MyStack
@@ -48,7 +48,7 @@ class MyStack
 
   public:
 
-  int ReSize;
+  int ReSize, Max, Min;
  //  int StackArray[ListSize];
 
   MyStack()
@@ -63,25 +63,36 @@ class MyStack
 
   void push( int n)                   // Push takes a interger if even and pushes the value
   {
-    if ( IsFull() == true )           // Checks if the Stack is full
+    if ( ContainerGrow() == true )    // Checks if the Stack is full
     count++;                          // keeps track of size
     p[count] = n;                     // inserts interger at array location = to count val.
+
+    if(count > Max)
+    {
+      Max = count;
+    }
     
   }
 
   void pop()                           
   {
-      int n;                        // temp value to display later
-      n = p[count];                 // stores value in n
-      count--;                      // decrease size of stack
-
+    if( ContainerShrink() == true)
+    {                 
+      count--; 
+    }                     
+    
       if(count < -1)
       {
         count = -1;
       }
+
+      if(count < Min)
+      {
+      Min = count ;
+      }
   }
 
-  bool IsFull()                     // Boolean statement  to check if stack is full
+  bool ContainerGrow()                     // Boolean statement  to check if stack is full
   {
     
     if ( (count + 1) == ListSize)          // If Count + 1 equal sizes number 
@@ -95,14 +106,15 @@ class MyStack
       p = q;                               // set pointer p to q
       delete q;                            // free up memory
       ReSize++;
+      Max++;
     }
   
   return true;  
   }
 
-  bool IsHalfFull()                        // Boolean statement  to check if stack is  is half full
+  bool ContainerShrink()                        // Boolean statement  to check if stack is  is half full
   {
-    if ( (count - 1) < ListSize / 2)       // if count -1 is less than size of list we can decrease
+    if ( count < ListSize / 2)       // if count -1 is less than size of list we can decrease
         {
           ListSize = ListSize * decSize;   // Cuts size of list by half
           q = new int [ListSize];          // creates new array
@@ -113,6 +125,7 @@ class MyStack
           p = q;                           // set pointer p to q
           delete q; 
           ReSize++;                        // free up memory
+                                     
         }
     return true;        
   }
@@ -160,8 +173,16 @@ while(infile >> x)                                    // for loop that generates
 
 // cout << S.StackArray << endl;
 
-cout << "Total of pushed numbers " << push1 <<endl;
-cout << "Total of popped numbers " << pop1 <<endl;
-cout << "Number of Resizes: " << S.ReSize << endl; 
+cout << "################################################################" << endl;
+cout << " Assignment 4 - Resizing the Stack " << endl;
+cout << " CPMS 3013 " << endl;
+cout << " Cameron O'Neal \n\n\n\n" ;
+
+cout << " Max Stack Size : " << S.Max << endl;
+cout << " Min Stack Size : " << S.Min << endl;
+cout << " Total of pushed numbers " << push1 <<endl;
+cout << " Total of popped numbers " << pop1 <<endl;
+cout << " Number of Resizes: " << S.ReSize << endl; 
+cout << "################################################################" << endl;
  
 }
