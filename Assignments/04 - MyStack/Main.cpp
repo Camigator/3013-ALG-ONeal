@@ -40,7 +40,7 @@ class MyStack
 {
   private:
 
-    int number, ListSize;                       // Number we send to the stack
+    int number, ListSize;     // Number we send to the stack
     int count;                        // keeps track of our stack Size
     int * p;                          // pointer P points to our array of numbers
     int * q;                          // Temp ptr that creates the new array
@@ -48,10 +48,12 @@ class MyStack
 
   public:
 
+  int ReSize;
  //  int StackArray[ListSize];
 
   MyStack()
   {
+    ReSize = 0;
     ListSize = 10;
     number = -99;
     count = -1; 
@@ -67,17 +69,16 @@ class MyStack
     
   }
 
-  int pop()                           
+  void pop()                           
   {
-    if( IsEmpty() == false)         // checks stack if half empty so it can resize
-    {
       int n;                        // temp value to display later
       n = p[count];                 // stores value in n
       count--;                      // decrease size of stack
-      return n;                     // returns value number
-    }
-    
-    return -99999999;               // returns value if stck is empty
+
+      if(count < -1)
+      {
+        count = -1;
+      }
   }
 
   bool IsFull()                     // Boolean statement  to check if stack is full
@@ -93,6 +94,7 @@ class MyStack
       }
       p = q;                               // set pointer p to q
       delete q;                            // free up memory
+      ReSize++;
     }
   
   return true;  
@@ -109,7 +111,8 @@ class MyStack
             q[i] = p[i];                   // set new values
           }
           p = q;                           // set pointer p to q
-          delete q;                        // free up memory
+          delete q; 
+          ReSize++;                        // free up memory
         }
     return true;        
   }
@@ -145,14 +148,12 @@ while(infile >> x)                                    // for loop that generates
   if( x % 2 == 0 )                                    // if integer is even push on stack
   {
     S.push(x);
-    cout << "[" << x << "] Was pushed"  << endl;
     push1++;
 
   }
   else                                                // else pop last int pushed on stack
   {
-    p = S.pop();
-    cout << "[" << p << "] Was Popped" <<endl;
+    S.pop();
     pop1++;
   }
 }
@@ -161,5 +162,6 @@ while(infile >> x)                                    // for loop that generates
 
 cout << "Total of pushed numbers " << push1 <<endl;
 cout << "Total of popped numbers " << pop1 <<endl;
+cout << "Number of Resizes: " << S.ReSize << endl; 
  
 }
