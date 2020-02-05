@@ -32,15 +32,15 @@
 
 using namespace std;
 
-// #define ListSize 10                   // size of our original stack
-#define IncSize 1.75                     // Mupltiplier to increase size of stack
+// #define ListSize 10                // size of our original stack
+#define IncSize 1.75                  // Mupltiplier to increase size of stack
 #define decSize .5                    // Mupltiplier to decrease size of stack
 
 class MyStack
 {
   private:
 
-    int number, ListSize;     // Number we send to the stack
+    int number, ListSize;             // Number we send to the stack
     int count;                        // keeps track of our stack Size
     int * p;                          // pointer P points to our array of numbers
     int * q;                          // Temp ptr that creates the new array
@@ -112,9 +112,9 @@ class MyStack
   return true;  
   }
 
-  bool ContainerShrink()                        // Boolean statement  to check if stack is  is half full
+  bool ContainerShrink()                   // Boolean statement  to check if stack is  is half full
   {
-    if ( count < ListSize / 2)       // if count -1 is less than size of list we can decrease
+    if ( count < ListSize / 2)             // if count -1 is less than size of list we can decrease
         {
           ListSize = ListSize * decSize;   // Cuts size of list by half
           q = new int [ListSize];          // creates new array
@@ -130,9 +130,9 @@ class MyStack
     return true;        
   }
   
-  bool IsEmpty()                          // checks is empty
+  bool IsEmpty()                           // checks is empty
   {
-    if(count == -1)                       // start of stack
+    if(count == -1)                        // start of stack
     return true;   
 
     return false;
