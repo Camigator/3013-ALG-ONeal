@@ -24,6 +24,12 @@
   <td> Creating our own banner Text </td>
   </tr>
   
+  <tr>
+  <td> 04 </td>
+  <td> <a href="https://github.com/Camigator/3013-ALG-ONeal/tree/master/Assignments/04%20-%20MyStack" > MyStack </a> </td>
+  <td> Creating a stack </td>
+  </tr>
+  
         
 </table>
 </body>
