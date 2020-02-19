@@ -30,6 +30,12 @@
   <td> Creating a stack </td>
   </tr>
   
+  <tr> 
+  <td> 05 </td>
+  <td> <a href = "https://github.com/Camigator/3013-ALG-ONeal/tree/master/Assignments/05%20-%20Linked%20List" > Linked List </a> </td>
+  <td> Timing of a Linked List w/ a Json File </td>
+  </tr>
+  
         
 </table>
 </body>
