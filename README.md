@@ -4,6 +4,7 @@ Second try at a first Repository
 ## Cameron O'Neal
 
 #### Repo: 3013 Algorithms Repo
+#### Professor Account : https://github.com/rugbyprof/3013-Algorithms
 #### Email: oneal.cameron12@gmail.com
 #### Website: https://repl.it/repls
 #### Image:
