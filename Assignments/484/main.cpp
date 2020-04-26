@@ -2,6 +2,9 @@
 #include <iomanip>
 #include <fstream>
 
+// Cameron O'Neal
+// 3013 Alg
+
 using namespace std; 
 
 
